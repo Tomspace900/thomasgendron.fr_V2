@@ -11,7 +11,7 @@ export default function Home() {
 	const { toast } = useToast();
 
 	return (
-		<div className='flex flex-col justify-center items-center h-screen gap-4 z-0'>
+		<div className='flex flex-col justify-center items-start h-screen mx-4 sm:mx-12 w-full max-w-[1200px] gap-8 z-0'>
 			<Button
 				onClick={() => {
 					toast({

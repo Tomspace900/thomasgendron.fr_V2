@@ -21,8 +21,8 @@ export default function RootLayout({
 	return (
 		<html lang='en' className={`${font.variable} font-sans`}>
 			<body className='bg-background w-full flex justify-center'>{children}</body>
-			<div className='absolute bottom-44 right-[5em] bg-background w-[500px] h-[400px] rounded-full blur-3xl bg-blue-400 opacity-70 -z-10'></div>
-			<div className='absolute -bottom-16 -left-[10em] bg-background w-[700px] h-[300px] rounded-full blur-3xl bg-gray-400 opacity-70 -z-10'></div>
+			<div className='absolute sm:bottom-44 top-24 sm:right-[5em] right-0 bg-background max-w-[500px] w-[45%] aspect-square rounded-full blur-3xl bg-blue-400 opacity-60 -z-10'></div>
+			<div className='absolute -bottom-16 sm:-left-[10em] left-0 bg-background max-w-[700px] w-[75%] h-[300px] aspect-auto rounded-full blur-3xl bg-gray-400 opacity-70 -z-10'></div>
 			<svg className='hidden'>
 				<filter id='noiseFilter'>
 					<feTurbulence type='fractalNoise' baseFrequency='0.5' stitchTiles='stitch' />
