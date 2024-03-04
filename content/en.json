@@ -1,4 +1,9 @@
 {
+	"LocaleSwitcher": {
+		"current": "English",
+		"fr": "Français",
+		"en": "English"
+	},
 	"landing": {
 		"welcome": "Welcome !",
 		"subWelcome": "Everything there is to know about me, and even more",

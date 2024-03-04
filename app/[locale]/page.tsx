@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 import { Github, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
@@ -11,6 +12,9 @@ export default function Home() {
 			<div className='h-[1px] w-1/2 bg-foreground'></div>
 			<span className='text-5xl font-thin'>{t("welcome")}</span>
 			<span className='text-2xl font-thin mt-10'>{t("subWelcome")}</span>
+			<div className='fixed sm:top-8 top-2 sm:right-8 right-2'>
+				<LocaleSwitcher />
+			</div>
 			<div className='flex flex-col sm:flex-row items-center my-6 sm:gap-0 gap-8 justify-between max-w-[800px] w-full'>
 				<Button asChild variant={"custom"} className='socials linkedin w-fit'>
 					<Link href='https://www.linkedin.com/in/gendron-thomas/' target='_blank'>

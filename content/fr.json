@@ -1,4 +1,9 @@
 {
+	"LocaleSwitcher": {
+		"current": "Français",
+		"fr": "Français",
+		"en": "English"
+	},
 	"landing": {
 		"welcome": "Bienvenue !",
 		"subWelcome": "Tout ce qu'il y a à savoir sur moi, et même davantage",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Heebo } from "next/font/google";
 import "@/app/globals.css";
 import { Toaster } from "@/components/ui/toaster";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 
 const font = Heebo({
 	subsets: ["latin"],
@@ -27,18 +28,20 @@ const backgroundDots = (
 	</>
 );
 
-export default function RootLayout({
-	children,
-	params: { locale },
-}: Readonly<{
+type RootLayoutProps = {
 	children: React.ReactNode;
-	params: { locale: string };
-}>) {
+	params: { locale: Locale };
+};
+
+export default function RootLayout({ children, params: { locale } }: RootLayoutProps) {
+	const content = useMessages();
 	return (
 		<html lang={locale} className={`${font.variable} font-sans font-light`}>
 			<body className='bg-background w-full flex justify-center z-0 relative'>
-				{children}
-				{grainyBackground}
+				<NextIntlClientProvider messages={content}>
+					{children}
+					{grainyBackground}
+				</NextIntlClientProvider>
 			</body>
 
 			{backgroundDots}

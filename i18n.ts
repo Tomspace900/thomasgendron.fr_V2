@@ -3,12 +3,14 @@ import { notFound } from "next/navigation";
 import { locales } from "./middleware";
 
 export default getRequestConfig(async ({ locale }) => {
+	const baseLocale = new Intl.Locale(locale).baseName;
+
 	// Validate that the incoming `locale` parameter is valid
-	if (!locales.includes(locale as any)) {
+	if (!locales.includes(baseLocale as any)) {
 		notFound();
 	}
 
 	return {
-		messages: (await import(`@/content/${locale}.json`)).default,
+		messages: (await import(`@/content/${baseLocale}.json`)).default,
 	};
 });
