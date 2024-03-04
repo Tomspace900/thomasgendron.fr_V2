@@ -74,7 +74,7 @@
 		--input: 0 0% 89.8%; /* Border color for inputs such as <Input />, <Select />, <Textarea /> */
 		--ring: 0 0% 3.9%; /* Used for focus ring */
 
-		--radius: 2rem; /* Border radius for card, input and buttons */
+		--radius: 1.5rem; /* Border radius for card, input and buttons */
 
 		/* CUSTOM */
 		--instagram-gradient: linear-gradient(
