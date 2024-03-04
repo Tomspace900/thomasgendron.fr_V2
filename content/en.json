@@ -1,0 +1,11 @@
+{
+	"landing": {
+		"welcome": "Welcome !",
+		"subWelcome": "Everything there is to know about me, and even more",
+		"socials": {
+			"linkedin": "A bit more formal",
+			"github": "A bit more technical",
+			"instagram": "A bit more personal"
+		}
+	}
+}

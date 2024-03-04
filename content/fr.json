@@ -1,0 +1,11 @@
+{
+	"landing": {
+		"welcome": "Bienvenue !",
+		"subWelcome": "Tout ce qu'il y a à savoir sur moi, et même davantage",
+		"socials": {
+			"linkedin": "Un peu plus formel",
+			"github": "Un peu plus technique",
+			"instagram": "Un peu plus personnel"
+		}
+	}
+}
