@@ -1,5 +1,5 @@
 import Landing from "@/components/sections/Landing";
-import LocaleSwitcher from "@/components/LocaleSwitcher";
+import Pictures from "@/components/sections/Pictures";
 
 export default function Home() {
 	return (
@@ -7,6 +7,8 @@ export default function Home() {
 			<Landing />
 
 			<span className='text-4xl font-thin'>J'y ai travaillé</span>
+
+			<Pictures />
 		</div>
 	);
 }
