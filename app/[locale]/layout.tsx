@@ -3,6 +3,7 @@ import { Heebo } from "next/font/google";
 import "@/app/globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { NextIntlClientProvider, useMessages } from "next-intl";
+import LocaleSwitcher from "@/components/LocaleSwitcher";
 
 const font = Heebo({
 	subsets: ["latin"],
@@ -40,8 +41,11 @@ export default function RootLayout({ children, params: { locale } }: RootLayoutP
 			<body className='bg-background w-full flex justify-center z-0 relative'>
 				<NextIntlClientProvider messages={content}>
 					{children}
-					{grainyBackground}
+					<div className='fixed sm:top-8 top-2 sm:right-8 right-2'>
+						<LocaleSwitcher />
+					</div>
 				</NextIntlClientProvider>
+				{grainyBackground}
 			</body>
 
 			{backgroundDots}
