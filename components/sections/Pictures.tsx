@@ -18,26 +18,26 @@ export default function Pictures() {
 				plugins={[
 					Autoplay({
 						delay: 3000,
-						stopOnHover: true,
 					}),
 				]}>
 				<CarouselContent>
 					{pictures.map((picture, index) => (
-						<CarouselItem key={index} className='flex items-center justify-center w-full aspect-square'>
-							<div className='relative w-full h-full mx-8 rounded-lg overflow-hidden'>
+						<CarouselItem key={index} className='flex items-center justify-center w-full h-[500px] max-w-[500px]'>
+							<div className='relative mx-8 rounded-lg overflow-hidden max-h-full w-full'>
 								<Image
 									src={`/images/${picture}`}
 									alt={`Picture ${index + 1}`}
-									fill
-									objectFit='cover'
+									width={500}
+									height={500}
 									loading='lazy'
+									className='object-contain'
 								/>
 							</div>
 						</CarouselItem>
 					))}
 				</CarouselContent>
-				<CarouselPrevious className='sm:flex hidden' />
-				<CarouselNext className='sm:flex hidden' />
+				<CarouselPrevious variant='default' className='sm:flex hidden' />
+				<CarouselNext variant='default' className='sm:flex hidden' />
 			</Carousel>
 		</>
 	);
