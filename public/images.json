@@ -1,0 +1,17 @@
+{
+	"images": [
+		{
+			"id": 1,
+			"alt": "Description de l'image 1",
+			"location": "Paris, France"
+		},
+		{
+			"id": 2,
+			"alt": "Description de l'image 2"
+		},
+		{
+			"id": 3,
+			"alt": "Description de l'image 3"
+		}
+	]
+}
