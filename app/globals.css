@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+.dot1 {
+	animation: move-dot1 14s ease-in-out infinite;
+}
+
+.dot2 {
+	animation: move-dot2 8s ease-in-out infinite;
+}
+
+@keyframes move-dot1 {
+	0% {
+		transform: translate(-80%, -30%);
+	}
+	50% {
+		transform: translate(5%, 5%);
+	}
+	100% {
+		transform: translate(-80%, -30%);
+	}
+}
+
+@keyframes move-dot2 {
+	0% {
+		transform: translateY(30%);
+	}
+	50% {
+		transform: translateY(-20%);
+	}
+	100% {
+		transform: translateY(30%);
+	}
+}
+
 .socials {
 	position: relative;
 	transition: all 0.2s ease;

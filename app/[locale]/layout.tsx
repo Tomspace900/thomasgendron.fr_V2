@@ -24,8 +24,8 @@ const grainyBackground = (
 
 const backgroundDots = (
 	<>
-		<div className='absolute sm:bottom-44 top-24 sm:right-[5em] right-0 bg-background max-w-[500px] w-[45%] aspect-square rounded-full blur-3xl bg-blue-400 opacity-60 -z-20'></div>
-		<div className='absolute top-[80vh] sm:-left-[10em] left-0 bg-background max-w-[700px] w-[75%] h-[300px] aspect-auto rounded-full blur-3xl bg-gray-400 opacity-70 -z-20'></div>
+		<div className='dot1 absolute sm:bottom-44 top-24 sm:right-[5em] right-0 bg-background max-w-[500px] w-[45%] aspect-square rounded-full blur-3xl bg-blue-400 opacity-65 -z-20'></div>
+		<div className='dot2 absolute top-[75vh] sm:-left-[10em] left-0 bg-background max-w-[700px] w-[75%] h-[300px] aspect-auto rounded-full blur-3xl bg-gray-400 opacity-70 -z-20'></div>
 	</>
 );
 
