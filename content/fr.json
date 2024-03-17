@@ -12,5 +12,11 @@
 			"github": "Un peu plus technique",
 			"instagram": "Un peu plus personnel"
 		}
+	},
+	"work": {
+		"title": "J'ai travaillé ici"
+	},
+	"pictures": {
+		"title": "Je voyage, et je prends des photos"
 	}
 }

@@ -5,14 +5,17 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { MapPin } from "lucide-react";
 import { ImageDataWithSrc } from "@/utils/fetchImages";
+import { useTranslations } from "next-intl";
 
 type PicturesProps = {
 	images: ImageDataWithSrc[];
 };
 
 export default function Pictures({ images }: PicturesProps) {
+	const t = useTranslations("pictures");
 	return (
 		<>
+			<span className='text-4xl font-thin'>{t("title")}</span>
 			<Carousel
 				className='w-full max-w-xl'
 				opts={{

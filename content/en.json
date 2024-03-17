@@ -12,5 +12,11 @@
 			"github": "A bit more technical",
 			"instagram": "A bit more personal"
 		}
+	},
+	"work": {
+		"title": "I worked here"
+	},
+	"pictures": {
+		"title": "I travel, and I took pictures"
 	}
 }

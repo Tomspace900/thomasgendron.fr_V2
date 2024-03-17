@@ -1,3 +1,5 @@
+"use client";
+
 import { useTranslations } from "next-intl";
 import { Button } from "../ui/button";
 import Link from "next/link";
@@ -17,7 +19,7 @@ export default function Landing() {
 
 			<div className='flex flex-col sm:flex-row items-center my-6 sm:gap-0 gap-8 justify-between max-w-[800px] w-full'>
 				<Button asChild variant={"custom"} className='socials linkedin w-fit'>
-					<Link href='https://www.linkedin.com/in/gendron-thomas/' target='_blank'>
+					<Link href='https://linkedin.com/in/gendron-thomas/' target='_blank'>
 						<Linkedin className='mr-4 h-6 w-6 stroke-[1.2]' />
 						{t("socials.linkedin")}
 					</Link>
@@ -31,7 +33,7 @@ export default function Landing() {
 				</Button>
 
 				<Button asChild variant={"custom"} className='socials instagram rounded-full w-fit'>
-					<Link href='https://www.instagram.com/thek_nick/' target='_blank'>
+					<Link href='https://instagram.com/thek_nick/' target='_blank'>
 						<Instagram className='mr-4 h-6 w-6 stroke-[1.2]' />
 						{t("socials.instagram")}
 					</Link>

@@ -1,4 +1,5 @@
-import { promises as fs } from "fs";
+import path from "path";
+import fs from "fs";
 
 type ImageData = {
 	id: number;
@@ -11,8 +12,12 @@ export type ImageDataWithSrc = ImageData & {
 };
 
 export default async function fetchImagesData() {
-	const jsonData = await fs.readFile(process.cwd() + "/public/images.json", "utf-8");
-	const imgSrc = await fs.readdir(process.cwd() + "/public/images");
+	const jsonPath = path.join(process.cwd(), "data/images.json");
+	const imgDirPath = path.join(process.cwd(), "public/images");
+
+	const jsonData = fs.readFileSync(jsonPath, "utf-8");
+	const imgSrc = fs.readdirSync(imgDirPath, "utf-8");
+
 	const data = JSON.parse(jsonData) as { images: ImageData[] };
 
 	const images: ImageDataWithSrc[] = data.images
