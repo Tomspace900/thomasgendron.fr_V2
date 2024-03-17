@@ -22,13 +22,15 @@ export default function Pictures({ images }: PicturesProps) {
 				plugins={[
 					Autoplay({
 						delay: 3000,
+						stopOnMouseEnter: true,
+						stopOnInteraction: false,
 					}),
 				]}>
 				<CarouselContent>
 					{images &&
 						images.map((picture, index) => (
-							<CarouselItem key={index} className='flex items-center justify-center w-full h-[500px] max-w-[500px]'>
-								<div className='relative mx-8 rounded-lg overflow-hidden max-h-full w-full'>
+							<CarouselItem key={index} className='flex items-center justify-center w-full h-[500px] '>
+								<div className='relative rounded-lg overflow-hidden max-h-full w-full max-w-[500px]'>
 									<Image
 										src={picture.src}
 										alt={picture.alt}
@@ -50,8 +52,8 @@ export default function Pictures({ images }: PicturesProps) {
 							</CarouselItem>
 						))}
 				</CarouselContent>
-				<CarouselPrevious variant='default' className='sm:flex hidden' />
-				<CarouselNext variant='default' className='sm:flex hidden' />
+				<CarouselPrevious variant='default' className='md:flex hidden' />
+				<CarouselNext variant='default' className='md:flex hidden' />
 			</Carousel>
 		</>
 	);
