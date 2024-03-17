@@ -25,7 +25,7 @@ const grainyBackground = (
 const backgroundDots = (
 	<>
 		<div className='absolute sm:bottom-44 top-24 sm:right-[5em] right-0 bg-background max-w-[500px] w-[45%] aspect-square rounded-full blur-3xl bg-blue-400 opacity-60 -z-20'></div>
-		<div className='absolute -bottom-16 sm:-left-[10em] left-0 bg-background max-w-[700px] w-[75%] h-[300px] aspect-auto rounded-full blur-3xl bg-gray-400 opacity-70 -z-20'></div>
+		<div className='absolute top-[80vh] sm:-left-[10em] left-0 bg-background max-w-[700px] w-[75%] h-[300px] aspect-auto rounded-full blur-3xl bg-gray-400 opacity-70 -z-20'></div>
 	</>
 );
 
@@ -44,21 +44,23 @@ export default function RootLayout({ children, params: { locale } }: RootLayoutP
 					<div className='fixed sm:top-8 top-2 sm:right-8 right-2'>
 						<LocaleSwitcher />
 					</div>
+
+					{grainyBackground}
+
+					{backgroundDots}
+
+					<svg className='hidden'>
+						<filter id='noiseFilter'>
+							<feTurbulence type='fractalNoise' baseFrequency='0.5' stitchTiles='stitch' />
+							<feColorMatrix in='colorNoise' type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0' />
+							<feComposite operator='in' in2='SourceGraphic' result='monoNoise' />
+							<feBlend in='SourceGraphic' in2='monoNoise' mode='screen' />
+						</filter>
+					</svg>
+
+					<Toaster />
 				</NextIntlClientProvider>
-				{grainyBackground}
 			</body>
-
-			{backgroundDots}
-
-			<svg className='hidden'>
-				<filter id='noiseFilter'>
-					<feTurbulence type='fractalNoise' baseFrequency='0.5' stitchTiles='stitch' />
-					<feColorMatrix in='colorNoise' type='matrix' values='1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 1 0' />
-					<feComposite operator='in' in2='SourceGraphic' result='monoNoise' />
-					<feBlend in='SourceGraphic' in2='monoNoise' mode='screen' />
-				</filter>
-			</svg>
-			<Toaster />
 		</html>
 	);
 }

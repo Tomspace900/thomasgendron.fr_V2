@@ -8,11 +8,11 @@ export default function Landing() {
 
 	return (
 		<>
-			<span className='text-6xl font-extralight slideUp'>THOMAS GENDRON</span>
+			<span className='text-6xl font-extralight'>THOMAS GENDRON</span>
 
 			<div className='h-[1px] w-1/2 bg-foreground'></div>
 
-			<span className='text-5xl font-thin slideDown'>{t("welcome")}</span>
+			<span className='text-5xl font-thin'>{t("welcome")}</span>
 			<span className='text-2xl font-thin mt-10'>{t("subWelcome")}</span>
 
 			<div className='flex flex-col sm:flex-row items-center my-6 sm:gap-0 gap-8 justify-between max-w-[800px] w-full'>
