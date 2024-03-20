@@ -10,15 +10,19 @@
 	animation: move-dot2 8s ease-in-out infinite;
 }
 
+.dot3 {
+	animation: move-dot3 9s ease-in-out infinite;
+}
+
 @keyframes move-dot1 {
 	0% {
-		transform: translate(-80%, -30%);
+		transform: translate(-90%, -30%);
 	}
 	50% {
-		transform: translate(5%, 5%);
+		transform: translate(10%, 10%);
 	}
 	100% {
-		transform: translate(-80%, -30%);
+		transform: translate(-90%, -30%);
 	}
 }
 
@@ -31,6 +35,18 @@
 	}
 	100% {
 		transform: translateY(30%);
+	}
+}
+
+@keyframes move-dot3 {
+	0% {
+		transform: translate(-10%, 0%);
+	}
+	50% {
+		transform: translate(40%, 100%);
+	}
+	100% {
+		transform: translate(-10%, 0%);
 	}
 }
 
